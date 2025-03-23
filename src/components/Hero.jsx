@@ -1,7 +1,7 @@
 import profilePic from '../assets/harsh-profile.jpg';
 import Harsh_content from "../assets/Harsh_content.jsx";
-// import Harsh_Bajpai_Resume from "../assets/Harsh_Bajpai_resume.pdf"
-// eslint-disable-next-line no-unused-vars
+import Harsh_Resume from "../assets/Harsh_Bajpai_Resume.pdf"
+// eslint-disable-next-line no-unused-varsD:\Harsh_Bajpai\TestHB\src\assets\Harsh_Bajpai_Resume.pdf
 import { motion } from 'framer-motion';
 
 const containerVariable = {
@@ -46,7 +46,7 @@ const Hero = () => {
 
                         <motion.a
                             variants={childVariants}
-                            // href={Harsh_Bajpai_Resume}  // The href should point to the PDF file path
+                            href={Harsh_Resume}  // The href should point to the PDF file path
                             target='_blank'  // Ensures the PDF opens in a new tab
                             rel='noopener noreferrer'
                             download  // Optional: this is for downloading the file when clicked
