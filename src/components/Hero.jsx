@@ -1,6 +1,6 @@
 import profilePic from '../assets/harsh-profile.jpg';
 import Harsh_content from "../assets/Harsh_content.jsx";
-import Harsh_Bajpai_Resume from "../assets/Harsh_Bajpai_Resume.pdf"
+import Harsh_Bajpai_Resume from "../assets/Harsh_Bajpai_resume.pdf"
 // eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
 
