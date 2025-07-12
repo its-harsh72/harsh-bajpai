@@ -2,6 +2,7 @@
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion"
 import Postman from '../assets/Postman.png';
+import Nest from '../assets/NestJs.png';
 
 const iconsVariants = (duration) => ({
     initial: { y: -10 },
@@ -35,21 +36,26 @@ const Technologies = () => {
                 <motion.div initial="initial" animate="animate" variants={iconsVariants(7)} className="p-4">
                     <i className="fa-brands fa-envira text-7xl text-green-500"></i>
                 </motion.div>
-                <motion.div initial="initial" animate="animate" variants={iconsVariants(4)} className="p-4">
-                    <i className="fa-brands fa-bootstrap text-7xl text-purple-500"></i>
-                </motion.div>
+                <motion.div initial="initial" animate="animate" variants={iconsVariants(1.8)} className="p-4">
+                    <img
+                        src={Nest}
+                        alt="NestJs"
+                        className="rounded-full center bg-transparent w-20 h-auto"
+                    />
+                </motion.div>  
+
                 <motion.div initial="initial" animate="animate" variants={iconsVariants(1.8)} className="p-4">
                     <img
                         src={Postman}
                         alt="Postman"
-                        className="rounded-full bg-transparent w-[80px] h-auto"
+                        className="rounded-full center bg-transparent w-20 h-auto"
                     />
                 </motion.div>
                 <motion.div initial="initial" animate="animate" variants={iconsVariants(5)} className="p-4">
-                    <i className="fa-brands fa-git text-7xl text-red-500"></i>
+                    <i className="fa-brands fa-github text-7xl text-grey-500"></i>
                 </motion.div>
                 <motion.div initial="initial" animate="animate" variants={iconsVariants(6)} className="p-4">
-                    <i className="fa-brands fa-css3 text-7xl text-blue-500"></i>
+                    <i className="fa-brands fa-docker text-7xl text-blue-500"></i>
                 </motion.div>
             </motion.div>
         </div>
