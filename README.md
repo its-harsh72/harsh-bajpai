@@ -1,12 +1,67 @@
-# React + Vite
+# Backend-Focused Engineering Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Modern dark-themed portfolio for a backend-focused full-stack engineer, built with React, Vite, Tailwind CSS, and Framer Motion.
 
-Currently, two official plugins are available:
+## Highlights
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Premium dark cinematic UI with subtle glow and glassmorphism
+- Sticky blur navbar with active section highlighting
+- Mobile-first responsive navigation
+- Backend expertise section with architecture-focused cards
+- Professional skills grouped by Backend, Frontend, DevOps & Tools
+- Premium project cards with hover motion and stack badges
+- Animated timeline experience section
+- GitHub activity section with contribution graph and repo stats
+- Smooth section transitions and scroll behavior
 
-## Expanding the ESLint configuration
+## Stack
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React 19
+- Vite 6
+- Tailwind CSS
+- Framer Motion
+
+## Run Locally
+
+```bash
+npm install
+npm run dev
+```
+
+## Build
+
+```bash
+npm run build
+npm run preview
+```
+
+## Folder Architecture
+
+```text
+src/
+  assets/
+  components/
+    About.jsx
+    BackendExpertise.jsx
+    Contact.jsx
+    CurrentlyExploring.jsx
+    Experience.jsx
+    Footer.jsx
+    GithubActivity.jsx
+    Hero.jsx
+    Navbar.jsx
+    Projects.jsx
+    SectionHeading.jsx
+    Skills.jsx
+  data/
+    portfolioData.js
+  App.jsx
+  index.css
+  main.jsx
+```
+
+## Future Enhancements
+
+- Add Shadcn UI primitives for standardized component tokens
+- Add API-based GitHub activity fetch for real-time data
+- Migrate to Next.js App Router for SSR + SEO upgrades

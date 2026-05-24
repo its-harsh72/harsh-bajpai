@@ -1,38 +1,80 @@
-import React from 'react';
-import ProjectData from './ProjectData';  
-// eslint-disable-next-line no-unused-vars
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
+import SectionHeading from "./SectionHeading";
+import { projects } from "../data/portfolioData";
 
 const Projects = () => {
   return (
-    <div className='pb-4'>
-      <motion.h2 whileInView={{opacity:1, y:0}} initial={{opacity:0,y:-100}} transition={{duration:0.5}} className='my-20 text-center text-4xl'>Projects</motion.h2>
-      <div>
-        {ProjectData.map((project, index) => (
-          <div key={index} className='mb-8 flex flex-wrap lg:justify-center'>
-            <motion.div  whileInView={{opacity:1,x:0}} initial={{opacity:0,x:-100}} transition={{duration:1}} className="w-full lg:w-1/4">
-              <img 
-                src={project.image} 
-                width={250} 
-                height={250} 
-                alt={project.title} 
-                className='mb-6 rounded' 
+    <section id="projects" className="section-spacing scroll-mt-24">
+      <SectionHeading
+        eyebrow="Projects"
+        title="Selected Engineering Projects"
+        description="Production-inspired builds focused on secure backend architecture, scalability, and end-to-end execution."
+      />
+
+      <div className="grid gap-6 xl:grid-cols-2">
+        {projects.map((project, index) => (
+          <motion.article
+            key={project.title}
+            initial={{ opacity: 0, y: 22 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.22 }}
+            transition={{ duration: 0.45, delay: index * 0.07 }}
+            className="project-card group"
+          >
+            <div className="overflow-hidden rounded-2xl border border-white/10">
+              <img
+                src={project.image}
+                alt={project.title}
+                className="h-56 w-full object-cover transition duration-700 group-hover:scale-[1.03]"
               />
-            </motion.div>
-            <motion.div whileInView={{opacity:1,x:0}} initial={{opacity:0,x:100}} transition={{duration:1}}   className='w-full max-w-xl lg:w-3/4'>
-              <h3 className="mb-2 font-semibold text-2xl">{project.title}</h3>
-              <p className='mb-4 text-stone-400'>{project.description}</p>
-              {project.technologies.map((tech, techIndex) => (
-                <span key={techIndex} className='mr-2 rounded bg-stone-900 p-2 text-sm font-medium text-stone-300'>
-                  {tech}
-                </span>
-              ))}
-            </motion.div>
-          </div>
+            </div>
+
+            <div className="mt-5">
+              <p className="text-xs uppercase tracking-[0.18em] text-cyan-200/75">{project.type}</p>
+              <h3 className="mt-2 font-outfit text-2xl font-semibold text-slate-50">{project.title}</h3>
+              <p className="mt-3 text-sm leading-relaxed text-slate-300/90">{project.description}</p>
+
+              <ul className="mt-4 space-y-2 text-sm text-slate-300/80">
+                {project.highlights.map((highlight) => (
+                  <li key={highlight} className="flex gap-2">
+                    <span className="mt-[7px] h-1.5 w-1.5 rounded-full bg-cyan-300/70" />
+                    <span>{highlight}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <div className="mt-5 flex flex-wrap gap-2">
+                {project.stack.map((item) => (
+                  <span key={item} className="skill-badge">
+                    {item}
+                  </span>
+                ))}
+              </div>
+
+              <div className="mt-6 flex flex-wrap gap-3">
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-secondary"
+                >
+                  GitHub
+                </a>
+                <a
+                  href={project.live}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-primary"
+                >
+                  Live Demo
+                </a>
+              </div>
+            </div>
+          </motion.article>
         ))}
       </div>
-    </div>
+    </section>
   );
-}
+};
 
-export default Projects
+export default Projects;

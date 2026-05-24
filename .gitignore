@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Local compiler/module caches
+.clang-module-cache/
+.swift-module-cache/

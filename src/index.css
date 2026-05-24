@@ -1,11 +1,58 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sixtyfour&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  font-family: "Inter", sans-serif;
-  background: black;
+  color-scheme: dark;
+}
 
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+  background: #020617;
+}
+
+@layer utilities {
+  .font-outfit {
+    font-family: "Outfit", sans-serif;
+  }
+
+  .section-spacing {
+    @apply py-14 md:py-20;
+  }
+
+  .glass-card {
+    @apply border border-white/10 bg-white/[0.04] backdrop-blur-xl;
+  }
+
+  .glow-card {
+    @apply border border-cyan-200/20 bg-gradient-to-b from-white/[0.06] to-white/[0.03] backdrop-blur-xl transition duration-300 hover:border-cyan-200/35 hover:shadow-[0_0_28px_rgba(56,189,248,0.18)];
+  }
+
+  .project-card {
+    @apply rounded-2xl border border-white/10 bg-white/[0.04] p-5 backdrop-blur-xl transition duration-300 hover:border-cyan-200/30 hover:shadow-[0_0_30px_rgba(56,189,248,0.16)];
+  }
+
+  .skill-badge {
+    @apply rounded-full border border-cyan-200/20 bg-cyan-300/10 px-3 py-1.5 text-xs font-medium text-cyan-100 transition duration-300 hover:-translate-y-0.5 hover:border-cyan-200/40 hover:bg-cyan-300/15;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-lg border border-cyan-300/35 bg-cyan-300/15 px-4 py-2.5 text-sm font-medium text-cyan-100 transition duration-300 hover:-translate-y-0.5 hover:bg-cyan-300/25;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-lg border border-white/15 bg-white/[0.02] px-4 py-2.5 text-sm font-medium text-slate-200 transition duration-300 hover:-translate-y-0.5 hover:border-white/25 hover:bg-white/[0.06];
+  }
+
+  .icon-btn {
+    @apply inline-flex items-center justify-center rounded-lg border border-white/10 bg-white/[0.03] px-3 py-2 text-xs text-slate-200 transition hover:border-cyan-200/30 hover:text-cyan-100;
+  }
 }
